@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Meu blog!</title>
+</head>
+<body>
+	<h1>BLOG!</h1>
+	{{ name }} 
+	<ul>
+	{% for item in lista_tech %}
+		{% if item == 'Django' %}
+			<b>{{ item }}</b>
+		{%else%}
+			<li>{{ item }}</li>
+		{%endif%}
+	{% endfor%}
+	</ul>
+</body>
+</html>
