@@ -20,3 +20,21 @@ Criando o superusuario do django:
 
 Criando um app:
 	python manage.py startapp [nome_do_app]
+
+Criando um git repository:
+	git init
+
+Mostrando histórico de reppository:
+	git status
+
+Fazendo um commit:
+	git add .
+	git commit -m "name"
+	git push origin master
+	git push -u origin master
+
+Add remote:
+	git remote add origin [adress]
+
+Listar branchs:
+	git branch -v
