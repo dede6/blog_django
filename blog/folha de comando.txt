@@ -1,0 +1,22 @@
+Ativando o virtual venv:
+	cd desktop/blog/venv/Scripts
+	activate
+
+Criando o projeto django:
+	django-admin startproject [nome]
+
+Rodando o projeto django:
+	python manage.py runserver
+
+Parar o server:
+	crtl + c
+
+
+Criar tabela no banco de dados (sqlite3):
+	python manage.py migrate
+
+Criando o superusuario do django:
+	python manage.py createsuperuser 
+
+Criando um app:
+	python manage.py startapp [nome_do_app]
