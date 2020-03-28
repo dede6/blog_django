@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Meu blog!</title>
-</head>
-<body>
-	<h1>BLOG!</h1>
-	{{ name }} 
-	<ul>
+<h1>BLOG!</h1>
+
+
+{{ name }} 
+<ul>
 	{% for item in lista_tech %}
 		{% if item == 'Django' %}
 			<b>{{ item }}</b>
@@ -14,6 +10,10 @@
 			<li>{{ item }}</li>
 		{%endif%}
 	{% endfor%}
-	</ul>
-</body>
-</html>
+</ul>
+
+{% for post in post %}
+	<h2>{{post.title}}</h2>
+	<h3>{{post.sub_title}}</h3>
+	<p>{{post.content}}</p>
+{% endfor %}
