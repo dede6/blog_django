@@ -10,7 +10,7 @@ def hello_blog(request):
 	 'DataBase', 'Nginx', 'Uwsgi', 'Systemctl'
 	 ]
 
-	list_post = Post.objects.all()
+	list_post = Post.objects.filter(deleted= False)
 	
 	data = {'name' : 'Curso de Django 3', 
 	'lista_tech' : lista,
@@ -18,3 +18,7 @@ def hello_blog(request):
 	}
 	
 	return render(request, 'index.html', data)
+
+def post_detail(request, id):
+	post = Post.objects.get(id=id)
+	return render(request, 'post_detail.html', {'post' : post})
